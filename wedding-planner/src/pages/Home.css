@@ -1,0 +1,660 @@
+/* Global Container */
+.home-container {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fef9ff;
+  color: #4a235a;
+}
+
+/* -------------------- Hero Section -------------------- */
+.hero-fullscreen {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fullscreen-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.search-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.search-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.dropdown {
+  padding: 12px 18px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  min-width: 240px;
+}
+
+.search-btn {
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #732d91;
+}
+
+/* -------------------- Popular Venue Section -------------------- */
+.popular-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.popular-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #6c3483;
+}
+
+.popular-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.popular-card {
+  width: 280px;
+  text-decoration: none;
+  color: #4a235a;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.popular-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.popular-title {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.popular-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------- Popular Searches Section -------------------- */
+.popular-searches {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.popular-searches h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #6c3483;
+}
+
+.search-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.search-item {
+  width: 220px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s;
+  text-decoration: none;
+  color: #4a235a;
+}
+
+.search-item img {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.search-item h3 {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.search-item:hover {
+  transform: scale(1.05);
+}
+
+/* -------------------- Wedding Categories Section -------------------- */
+.categories-section {
+  padding: 60px 20px;
+  background-color: #f8ecf8;
+  text-align: center;
+}
+
+.categories-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #6c3483;
+}
+
+.categories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category-btn {
+  padding: 12px 20px;
+  border: 2px solid #8e44ad;
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: white;
+  color: #8e44ad;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+.category-btn:hover {
+  background-color: #8e44ad;
+  color: white;
+}
+
+/* ----------- Wedding Categories with Dropdown ----------- */
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.category-card {
+  width: 240px;
+  position: relative;
+  text-align: center;
+}
+
+.category-img {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.category-img:hover {
+  transform: scale(1.03);
+}
+
+.dropdown-container {
+  position: relative;
+  margin-top: 10px;
+}
+
+.dropdown-toggle {
+  background-color: #8e44ad;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdown-toggle:hover {
+  background-color: #732d91;
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 200px;
+  z-index: 999;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.dropdown-container:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu a {
+  color: #4a235a;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f3e5f5;
+}
+
+/* ----------- WMG Inhouse Services Section ----------- */
+.wmg-section {
+  padding: 50px 30px;
+  background-color: #faf4fc;
+  text-align: center;
+}
+
+.wmg-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #4a235a;
+}
+
+.wmg-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.wmg-card {
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+.wmg-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Zoomable image container */
+.wmg-img-container {
+  position: relative;
+  width: 100%;
+  padding-top: 99.99%; /* 3:1 aspect ratio (100 / 3) */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.wmg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Zoom effect on hover */
+.wmg-card:hover .wmg-img {
+  transform: scale(1.1);
+}
+
+.wmg-card h3 {
+  color: #732d91;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.wmg-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 10px 0 15px;
+}
+
+.know-more-btn {
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.know-more-btn:hover {
+  background-color: #6c3483;
+}
+
+/* WMG Info expansion */
+.wmg-info {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f8ecf8;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.wmg-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4a235a;
+}
+
+/* Download App Section */
+.download-app-section {
+  padding: 50px 20px;
+  background-color: #faf4fc;
+  text-align: center;
+}
+
+.download-app-section h2 {
+  font-size: 2rem;
+  color: #4a235a;
+  margin-bottom: 30px;
+}
+
+.download-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.download-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  text-align: left;
+}
+
+.features {
+  display: flex;
+  gap: 12px;
+  color: #6a1b9a;
+  font-weight: 500;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.download-left p {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.phone-input {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.phone-input span {
+  font-weight: bold;
+}
+
+.phone-input input {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 180px;
+}
+
+.phone-input button {
+  padding: 8px 16px;
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.phone-input button:hover {
+  background-color: #732d91;
+}
+
+.download-right {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-img {
+  width: 250px;
+  height: auto;
+}
+
+/* ---------------- Real Wedding Stories Section ---------------- */
+.real-weddings-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.real-weddings-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #6c3483;
+}
+
+.wedding-stories-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.wedding-stories-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.wedding-stories-grid {
+  display: inline-flex;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.wedding-story-card {
+  width: 320px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.wedding-story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-image-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.wedding-story-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.wedding-story-card:hover .wedding-story-img {
+  transform: scale(1.05);
+}
+
+.story-details {
+  padding: 15px 5px;
+  text-align: center;
+}
+
+.story-details h3 {
+  color: #4a235a;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.story-description {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.wedding-date {
+  color: #8e44ad;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* About & Contact Section */
+.about-contact-section {
+  padding: 60px 20px;
+  background-color: #f8ecf8;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-block,
+.contact-block {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: center;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about-block h2,
+.contact-block h2 {
+  color: #6c3483;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.about-block p,
+.contact-block p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-link,
+.contact-link {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #8e44ad;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.about-link:hover,
+.contact-link:hover {
+  background-color: #732d91;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .search-overlay h1 {
+    font-size: 2.5rem;
+  }
+  
+  .wedding-story-card {
+    width: 280px;
+  }
+  
+  .story-image-container {
+    height: 350px;
+  }
+  
+  .about-contact-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-block,
+  .contact-block {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-overlay h1 {
+    font-size: 2rem;
+  }
+  
+  .search-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dropdown {
+    min-width: 200px;
+  }
+  
+  .wedding-story-card {
+    width: 240px;
+  }
+  
+  .story-image-container {
+    height: 300px;
+  }
+  
+  .popular-card {
+    width: 250px;
+  }
+  
+  .wmg-card {
+    width: 280px;
+  }
+}
